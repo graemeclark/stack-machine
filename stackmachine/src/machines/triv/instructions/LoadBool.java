@@ -1,4 +1,4 @@
-package machines.imp.triv;
+package machines.triv.instructions;
 
 import java.util.EmptyStackException;
 

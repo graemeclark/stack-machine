@@ -5,9 +5,10 @@ import java.util.*;
 public abstract class AbstractMachine
 {
 	
+  protected int codePointer;
+  
   protected Stack <StackType>       stack;
   protected List  <CodeVectorType>  codeVector;
-  protected int   codePointer;
 	
   public AbstractMachine()
   {
@@ -23,21 +24,24 @@ public abstract class AbstractMachine
 
 	for (CodeVectorType c : codeVector) {
 	  if(c.ins != null) {
-		  codePointer = codeVector.indexOf(c) + 1;  
-	      c.ins.executeInstruction();
+	    codePointer = codeVector.indexOf(c) + 1;  
+	    c.ins.executeInstruction();
 	  }
 	}
 	System.out.println(stack);
+	
   }
   
   public void setCodeVector(List<CodeVectorType> cv)
   {
+    
     codeVector = cv;
+    
   }
   
   public void push(StackType s)
   {
-	  
+	
 	stack.push(s);
 	  
   }

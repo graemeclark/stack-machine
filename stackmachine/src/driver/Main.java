@@ -1,8 +1,9 @@
 package driver;
 
 import java.util.*;
-import machines.TrivMachine;
-import machines.imp.triv.*;
+
+import machines.triv.TrivMachine;
+import machines.triv.instructions.*;
 import machines.types.*;
 
 public class Main
