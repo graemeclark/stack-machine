@@ -5,18 +5,29 @@ import java.util.*;
 public abstract class AbstractMachine
 {
 	
-  protected int codePointer;
+  protected int codePointer, stackPointer;
   
   protected Stack <StackType>       stack;
   protected List  <CodeVectorType>  codeVector;
 	
   public AbstractMachine()
   {
-		
+    
+    codePointer = 0;
+    stackPointer = 0;
+	
     stack       = new Stack <StackType>();
 	codeVector  = new ArrayList <CodeVectorType>();
-	codePointer = 0;
 		
+  }
+  
+  public String toString()
+  {
+    return "\n" +
+           "Code Vector: " + codeVector   + "\n" +
+           "Stack:       " + stack        + "\n" +
+           "SP:          " + stackPointer + "\n" +
+           "CP:          " + codePointer  + "\n" ;
   }
 	
   public void execute()
@@ -28,7 +39,6 @@ public abstract class AbstractMachine
 	    c.ins.executeInstruction();
 	  }
 	}
-	System.out.println(stack);
 	
   }
   
@@ -43,12 +53,14 @@ public abstract class AbstractMachine
   {
 	
 	stack.push(s);
-	  
+	stackPointer = stack.indexOf(s);
+	System.out.println(stack);  
+
   }
   
   public StackType pop()
   {
-	  
+    
 	return stack.pop();
 	  
   }
