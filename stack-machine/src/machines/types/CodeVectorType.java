@@ -40,6 +40,13 @@ public class CodeVectorType {
       return b.toString();
   
   }
+  
+  public boolean isInstruction()
+  {
+    
+    return ins != null;
+    
+  }
 	
   public AbstractInstruction getIns()
   {

@@ -24,7 +24,6 @@ public class AddOp extends AbstractInstruction
       e1 = m.pop().getInt();
       e2 = m.pop().getInt();
       
-      //m.stack.get
     }
     catch (EmptyStackException e) {
       System.out.println("Can't pop from the stack... nothing there.");

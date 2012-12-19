@@ -34,9 +34,13 @@ public abstract class AbstractMachine
   {
 
 	for (CodeVectorType c : codeVector) {
-	  if(c.ins != null) {
-	    codePointer = codeVector.indexOf(c) + 1;  
+	  
+	  if(c.isInstruction()) {
+	    
 	    c.ins.executeInstruction();
+	    codePointer++;
+	    System.out.println(this);
+	    
 	  }
 	}
 	
@@ -54,7 +58,6 @@ public abstract class AbstractMachine
 	
 	stack.push(s);
 	stackPointer = stack.indexOf(s);
-	System.out.println(stack);  
 
   }
   
@@ -67,7 +70,8 @@ public abstract class AbstractMachine
   
   public CodeVectorType getParameter()
   {
-	  
+    
+	codePointer++;  
 	return codeVector.get(codePointer);
 	  
   }
