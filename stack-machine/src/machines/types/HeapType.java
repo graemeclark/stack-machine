@@ -1,37 +1,58 @@
 package machines.types;
 
-public class StackType {
+public class HeapType
+{
 	
   Integer i;
   Boolean b;
 	
-  public StackType(int n)
+  public HeapType(int n)
   {
+  	
     i = n;
+    
   }
 	
-  public StackType(boolean bool)
+  public HeapType(boolean bool)
   {
+  	
     b = bool;
+    
   }
 	
   public String toString()
   {
+  	
     if (i != null)
       return i + "";
 	  
     else 
 	  return b + "";
+    
+  }
+  
+  public Object getVal()
+  {
+  	
+  	if (i != null)
+  		return i;
+  	
+    else 
+	    return b;
   }
 	
   public int getInt()
   {
-	return i;
+  	
+	  return i;
+	
   }
 	
   public boolean getBool()
   {
-	return b;
+  	
+	  return b;
+	
   }
 
 }

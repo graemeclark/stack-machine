@@ -17,19 +17,25 @@ public class AddOp extends AbstractInstruction
   @Override
   public void executeInstruction()
   {
+  	
     int e1 = 0;
     int e2 = 0;
     
     try {
+    	
       e1 = m.pop().getInt();
       e2 = m.pop().getInt();
       
     }
+    
     catch (EmptyStackException e) {
+    	
       System.out.println("Can't pop from the stack... nothing there.");
+      
     }
     
-    m.push(new StackType(e1 + e2));
+    m.push(new HeapType(e1 + e2));
+    
   }
 
 }

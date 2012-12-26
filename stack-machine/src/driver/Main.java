@@ -22,6 +22,9 @@ public class Main
     cv.add(new CodeVectorType(new LoadInt(triv)));
     cv.add(new CodeVectorType(5));
     cv.add(new CodeVectorType(new AddOp(triv)));
+    cv.add(new CodeVectorType(new LoadInt(triv)));
+    cv.add(new CodeVectorType(6));
+    cv.add(new CodeVectorType(new EqualOp(triv)));
     
     triv.setCodeVector(cv);
     triv.execute();

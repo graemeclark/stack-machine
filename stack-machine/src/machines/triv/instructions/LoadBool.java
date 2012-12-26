@@ -15,7 +15,7 @@ public class LoadBool extends AbstractInstruction
 	public void executeInstruction()
 	{
 	  
-      m.push(new StackType(m.getParameter().getBool()));
+      m.push(new HeapType(m.getParameter().getBool()));
       
 	}
 	

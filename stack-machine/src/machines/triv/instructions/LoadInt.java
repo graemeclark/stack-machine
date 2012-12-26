@@ -11,7 +11,7 @@ public class LoadInt extends AbstractInstruction {
 	public void executeInstruction()
 	{
 	  
-	  m.push(new StackType(m.getParameter().getInt()));
+	  m.push(new HeapType(m.getParameter().getInt()));
 
 	}
 
