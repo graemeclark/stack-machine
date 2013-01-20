@@ -21,17 +21,13 @@ public class EqualOp extends AbstractInstruction
   	Object e1 = null;
   	Object e2 = null;
   	
-    try {
-    	
+    try {    	
       e1 = m.pop().getVal();
-      e2 = m.pop().getVal();
-      
+      e2 = m.pop().getVal();      
     }
     
-    catch (EmptyStackException e) {
-    	
-      System.out.println("Can't pop from the stack... nothing there.");
-      
+    catch (EmptyStackException e) {    	
+      System.out.println("Can't pop from the stack... nothing there.");      
     }
     
     m.push(new HeapType(e1 == e2));

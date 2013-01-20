@@ -38,16 +38,13 @@ public abstract class AbstractMachine
   public void execute()
   {
 
-	for (CodeVectorType c : codeVector) {
-	  
-	  if(c.isInstruction()) {
-	    
-	    c.ins.executeInstruction();
-	    codePointer++;
-	    System.out.println(this);
-	    
+	  for (CodeVectorType c : codeVector) {	  
+	    if(c.isInstruction()) {	    
+	      c.ins.executeInstruction();
+	      codePointer++;
+	      System.out.println(this);	    
+	    }
 	  }
-	}
 	
   }
   

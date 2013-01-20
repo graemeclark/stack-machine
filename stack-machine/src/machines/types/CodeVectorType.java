@@ -9,21 +9,21 @@ public class CodeVectorType {
   public CodeVectorType(AbstractInstruction i)
   {
 	  
-	ins = i;
+	  ins = i;
 		
   }
 	
   public CodeVectorType(int n)
   {
 	  
-	i = n;
+	  i = n;
 		
   }
 	
   public CodeVectorType(boolean bool)
   {
 	  
-	b = bool;
+	  b = bool;
 		
   }
 	
@@ -51,21 +51,21 @@ public class CodeVectorType {
   public AbstractInstruction getIns()
   {
 	  
-	return ins;
+	  return ins;
 		
   }
 	
   public int getInt()
   {
 	  
-	return i;
+	  return i;
 		
   }
 	
   public boolean getBool()
   {
 	  
-	return b;
+	  return b;
 		
   }
 

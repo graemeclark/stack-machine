@@ -21,17 +21,13 @@ public class AddOp extends AbstractInstruction
     int e1 = 0;
     int e2 = 0;
     
-    try {
-    	
+    try {    	
       e1 = m.pop().getInt();
-      e2 = m.pop().getInt();
-      
+      e2 = m.pop().getInt();     
     }
     
-    catch (EmptyStackException e) {
-    	
-      System.out.println("Can't pop from the stack... nothing there.");
-      
+    catch (EmptyStackException e) {   	
+      System.out.println("Can't pop from the stack... nothing there.");     
     }
     
     m.push(new HeapType(e1 + e2));

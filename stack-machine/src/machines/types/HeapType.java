@@ -25,7 +25,7 @@ public class HeapType
   	
     if (i != null)
       return i + "";
-	  
+    
     else 
 	  return b + "";
     
